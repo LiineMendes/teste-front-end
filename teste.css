@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=DynaPuff:wght@400..700&family=Inconsolata:wght@200..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1f2125;
+    height: 100vh;
+}
+
+/*--------------------------MENU---------------------------*/
+.header {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: inline-flex;
+}
+
+header {
+    padding: 30px 4%;
+}
+
+header > .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*--------LISTA---------*/
+header a {
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+}
+
+header nav ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header nav ul li{
+    padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; 
+        text-align: center;
+        background-color: #1f2125; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none; 
+        transition: display 0.3s ease;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    header nav ul li {
+        padding: 15px 0;
+    }
+
+    header .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    header .menu-toggle i {
+        font-size: 30px;
+        color: white;
+    }
+}
+
+nav a::after {
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: #f9ac54;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+ nav a:hover::after {
+    width: 50%;
+}
+
+/*--------BOTÃO---------*/
+
+header .button button{
+    font-family: "Poppins", sans-serif;
+    padding: 11px 30px;
+    font-size: 14px;
+    background-color: #f9ac54;
+    color: #ffffff;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+header .button button:hover{
+    background-color: #d79447;
+    transition: 0.4s ease;
+}
+
+/*---------------TOPO--------------*/
+section.topo {
+    padding: 20px 4%;
+}
+
+section.topo .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.topo h1 {
+    color: #d79447;
+    font-size: 13px;
+    line-height: 55px;
+}
+
+.topo h2 {
+    color: #ffffff;
+    font-size: 70px;
+    line-height: 68px;
+}
+
+.topo h2 span {
+    color: #1f2125;
+    -webkit-text-stroke: 1px #ffffff;
+    font-size: 70px;
+}
+
+.topo p {
+    color: #ffffff;
+    margin: 15px 0px 20px;
+    width: 550px;
+}
+
+/*--------BOTÃO 2---------*/
+
+.topo button{
+    font-family: "Poppins", sans-serif;
+    padding: 11px 30px;
+    font-size: 14px;
+    background-color: #f9ac54;
+    color: #ffffff;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.topo button:hover{
+    background-color: #d79447;
+    transition: 0.4s ease;
+}
+
+/*------------PROGRAMAÇÃO--------------*/
+
+.programas {
+    padding: 70px 4%;
+    display: grid;
+    gap: 30px;
+}
+.header .titulo h2 {
+    color: #ffffff;
+    display: inline-block;
+    padding: 0 0 60px;
+    font-size: 25px;
+    text-align: left;
+}
+
+.header .titulo i {
+    color: #ffffff;
+    display: inline-flex;
+    padding-left: 300px;
+    line-height: 60px;
+    font-size: 24px;
+}
+
+.box div {
+    width: 218px;
+    height: 100px;
+    display: inline-block;
+    margin: 19px;
+}
+
+.box .quadrado {
+    background-color: #35373b;
+    border-radius: 2px;
+    padding: 0px 0px 4px 11px;
+    height: 33vh;
+    width: 20%;
+}
+
+.box .quadrado:hover {
+    background-color: #505052;
+    border: 1px solid #f9ac54;
+    transition: 0.5s ease;
+}
+
+.box .quadrado i {
+    color: #ffffff;
+    background-color: #d79447;
+    padding: 3px 7px 3px;
+    border-radius: 3px;
+    line-height: 45px;
+}
+
+.box h3 {
+    color: #ffffff;
+    line-height: 30px;
+
+}
+.box p {
+    color: #cfcece;
+    font-size: 12px;
+}
+
+.box a {
+    color: #ffffff;
+    line-height: 50px;
+    text-decoration: none; 
+    font-size: 14px;
+}
+
+.box a:hover {
+    color: #d79447;
+    transition: 0.5s ease;
+}
+
+/*-----------CLASS------------*/
+.fotos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 200px;
+    padding: 1% 1%;
+    gap: 1cm;
+}
+
+.classe-2 {
+    position: absolute;
+    left: 70px;
+}
+
+.foto-um {
+    position: relative;
+}
+
+.fotos .textos h2 {
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.fotos .textos p {
+    color: #cfcece;
+    font-size: 12px;
+}
+
+.textos .button button{
+    font-family: "Poppins", sans-serif;
+    padding: 11px 30px;
+    font-size: 14px;
+    background-color: #f9ac54;
+    color: #ffffff;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.textos .button button:hover{
+    background-color: #d79447;
+    transition: 0.4s ease;
+}
+
+/*------------JOIN--------------*/
+
+.join {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 180px;
+    padding: 8% 1%;
+    gap: 1cm;
+}
+
+.join-texto h2 {
+    color: #ffffff;
+    font-size: 23px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.join-texto p {
+    color: #cfcece;
+    font-size: 12px;
+    text-align: center;
+}
+
+.flex-2 {
+    background-color: #343435;
+    border-radius: 15px;
+    padding: 0px 70px 0px;
+
+}
+
+.box-2 div {
+    width: 218px;
+    height: 100px;
+    display: inline-block;
+    justify-content: center;
+    margin: 20px;
+}
+
+.container-2 {
+display: inline-block;
+align-items: center;
+gap: 10px; 
+}
+
+.container-2 i {
+    color: #ffffff;
+    background-color: #d79447;
+    font-size: 100%;
+    padding: 3px 7px 3px;
+    border-radius: 3px;
+    line-height: 45px;
+}
+
+.container-2 h3{
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.container-2 p {
+    color: #cfcece;
+    font-size: 12px;
+}
+
+
+/*----------------PLANOS--------------------*/
+section.planos {
+    padding: 90px 8%;
+    display: inline-flexbox;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+}
+.planos h2 {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 23px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.planos p {
+    color: #cfcece;
+    font-size: 12px;
+    text-align: center;
+    padding: 1%;
+}
+
+.planos .box div {
+    display:inline-table;
+    margin: 19px;
+    line-height: 17px;
+}
+
+.planos .box .container {
+    background-color: #35373b;
+    border-radius: 5px;
+    margin: 9px;
+    padding: 15px 14px 4px 16px;
+    height: 48vh;
+    width: 30%;
+}
+
+.planos .box .container:hover {
+    background-color: #505052;
+    border: 1px solid #f9ac54;
+    transition: 0.5s ease;
+}
+
+.planos .box h3 {
+    color: #ffffff;
+    font-size: 12px;
+    text-align: left;
+    line-height: 30px;
+
+}
+
+.planos .box h4 {
+    color: #ffffff;
+    font-size: 20px;
+    text-align: left;
+    line-height: 38px;
+}
+
+.planos .box h4::after {
+    content: "";
+    width: 90%;
+    height: 1px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    background: #ffffff;
+}
+
+.planos .box p {
+    color: #cfcece;
+    text-align: left;
+    font-size: 9px;
+    padding: 16%;
+}
+
+.planos .estrelas i {
+    color: #d79447;
+    font-size: 10px;
+}
+
+.planos button{
+    font-family: "Poppins", sans-serif;
+    padding: 10px 70px 10px;
+    font-size: 12px;
+    background-color: #35373b;
+    color:#d79447;
+    border: 1px solid #f9ac54;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.planos button:hover{
+    color: #ffffff;
+    background-color: #f9ac54;
+    transition: 0.4s ease;
+}
+
+/*----------------AVALIAÇÃO------------------*/
+.avaliando {
+    background: #35373b;
+    padding: 73px 30%; 
+}
+
+.avaliando h3 {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 50px;
+}
+
+.avaliando p {
+    color: #cfcece;
+    font-size: 10px;
+}
+.avaliando i {
+    color: #f9ac54;
+    margin: 1px;
+}
+
+/*---SETAS----*/
+.setas-avaliacao {
+    text-align: right;
+    padding: 2% 0 2%;
+}
+
+.setas-avaliacao i {
+    font-size: 30px;
+}
+
+.setas-avaliacao i:hover {
+    color: white;
+    transition: 0.5s ease;
+}
+
+/*------------RODAPÉ-------------*/
+.rodape{
+    color: white;
+    height: auto;
+    width: 100%;
+    font-size: 14px;
+    font-family: helvetica;
+}
+
+.rodape a{
+    text-decoration: none;
+    color: white;
+}
+
+.rodape a:hover {
+    color: #d79447;
+}
+.rodape p{
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+.rodape-div{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin: auto;
+    align-items: stretch;
+    padding: 60px 10px 40px 150px;
+}
+.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+    display: flex;
+    width: calc(100% / 4 - 20px);
+    padding: 10px;
+}
+
+.rodape-direitos{
+    width: calc(100% - 20px);
+    background-color: black;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+        width: calc(50% - 20px);
+        padding: 10px;
+    }
+    .rodape-div{
+        padding: 60px 0px 40px 0px;
+    }
+}
